@@ -44,11 +44,11 @@ DATABASES = {
 # register the proxy getter function
 
 PROXY_GETTER = [
-    "freeProxyFirst",
-    "freeProxySecond",
+    "freeProxyFirst",  # 几分钟更新一次
+    # "freeProxySecond",  # 加入 cookies 验证
     # "freeProxyThird",  # 网站已不能访问
     "freeProxyFourth",
-    "freeProxyFifth",
+    # "freeProxyFifth",  # Port 加密咱不能用
     # "freeProxySixth"   # 不再提供免费代理
     "freeProxySeventh",
     # "freeProxyEight",
@@ -60,6 +60,7 @@ PROXY_GETTER = [
     # "freeProxyWallFirst",
     # "freeProxyWallSecond",
     # "freeProxyWallThird"
+    "freeProxyNoOne",
 ]
 
 # # API config http://127.0.0.1:5010

@@ -284,6 +284,24 @@ class GetFreeProxy(object):
             for proxy in proxies:
                 yield ':'.join(proxy)
 
+    @staticmethod
+    def freeProxyNoOne():
+        """
+        西拉免费代理
+        http://www.xiladaili.com/
+        :return:
+        """
+        num = 1
+        urls = []
+        for i in range(5):
+            urls.append('http://www.xiladaili.com/gaoni/{}/'.format(num))
+            num += 1
+
+        for url in urls:
+            tree = getHtmlTree(url)
+            ips = tree.xpath('//table[@class="fl-table"]//tr/td[1]/text()')
+            for proxy in ips:
+                yield proxy
 
 if __name__ == '__main__':
     from CheckProxy import CheckProxy
